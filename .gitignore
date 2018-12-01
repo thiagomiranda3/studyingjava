@@ -27,3 +27,5 @@ target
 # Intellij files
 *.iml
 .idea
+
+*.txt

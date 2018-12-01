@@ -13,18 +13,19 @@ import java.util.List;
 public class CopiandoArquivos {
 
     public static void main(String[] args) {
-        DateTimeFormatter fmt = DateTimeFormatter.ofPattern("mm-ss");
+        DateTimeFormatter minsecFmt = DateTimeFormatter.ofPattern("mm-ss");
+        DateTimeFormatter diamesFmt = DateTimeFormatter.ofPattern("dd-MM");
         LocalDateTime agora = LocalDateTime.now();
 
         List<String> linhas = Arrays.asList("Thiago Miranda", "Dayane Silva");
 
-        Path path = Paths.get("teste-" + agora.format(fmt) + ".txt");
+        Path path = Paths.get("teste-" + agora.format(minsecFmt) + ".txt");
 
         try {
-            Files.write(path, linhas, Charset.forName("UTF-8"));
+            Path dir = Files.createDirectories(Paths.get(agora.format(diamesFmt)));
+            Files.write(dir.resolve(path), linhas, Charset.forName("UTF-8"));
         } catch (IOException e) {
             e.printStackTrace();
         }
-
     }
 }
