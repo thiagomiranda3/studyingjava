@@ -1,4 +1,4 @@
-package br.com.tommiranda.io;
+package br.com.tommiranda.nio;
 
 import java.io.IOException;
 import java.nio.charset.Charset;
@@ -10,7 +10,7 @@ import java.time.format.DateTimeFormatter;
 import java.util.Arrays;
 import java.util.List;
 
-public class CopiandoArquivos {
+public class CriandoDiretorioEArquivo {
 
     public static void main(String[] args) {
         DateTimeFormatter minsecFmt = DateTimeFormatter.ofPattern("mm-ss");
