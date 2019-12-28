@@ -14,8 +14,6 @@ public class ListaArvoreDiretorios {
         DateTimeFormatter minsecFmt = DateTimeFormatter.ofPattern("mm-ss");
         LocalDateTime agora = LocalDateTime.now();
 
-        //Path path = Paths.get("teste-" + agora.format(minsecFmt) + ".txt");
-
         Path path = Paths.get("C:\\Windows");
 
         plotarArvoreArquivos(path, 0);

@@ -1,0 +1,7 @@
+Interfaces funcionais mais famosas
+
+1) Supplier<T>      --> T get();
+2) Predicate<T>     --> boolean test(T);
+3) Function<T, R>   --> R apply(T);
+4) Consumer<T>      --> void accept(T);
+5) Runnable         --> void run();
