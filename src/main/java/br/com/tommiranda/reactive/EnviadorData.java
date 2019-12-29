@@ -15,7 +15,8 @@ public class EnviadorData {
     }
 
     private static void enviaDatas(ObservableEmitter<LocalDateTime> emitter, Stream<LocalDate> datas) {
-        datas.forEach(data -> emitter.onNext(LocalDateTime.of(data, LocalTime.now())));
+        datas.map(data -> LocalDateTime.of(data, LocalTime.now()))
+             .forEach(emitter::onNext);
     }
 
     public static void main(String[] args) {
